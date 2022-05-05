@@ -583,3 +583,10 @@ footer {
     }
 }
 
+.confirmMsgHide {
+    display: none;
+}
+
+.confirmMsgHideShow {
+    color: green;
+}

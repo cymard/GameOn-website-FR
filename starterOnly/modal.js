@@ -185,6 +185,10 @@ function validate() {
             'NotifiedOfUpcomingEvents': document.getElementById("checkbox2").checked
         })
         // return true;
+        console.log('Merci ! Votre réservation a été reçue.');
+        const confirmMsgDiv = document.getElementsByClassName('confirmMsgHide');
+        confirmMsgDiv[0].classList.add("confirmMsgHideShow");
+        confirmMsgDiv[0].classList.remove("confirmMsgHide");
         return false;
     }
 
