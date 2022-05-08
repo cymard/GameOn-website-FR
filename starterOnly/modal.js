@@ -12,9 +12,11 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalBtnClose = document.querySelector(".close");
+const btnCloseConfirmMessageModal = document.querySelector(".closeConfirmMessage");
+const formModal = document.querySelector('.modal-body form');
+const divConfirmMessage = document.querySelector('.confirm-message');
+const modalBody = document.querySelector('.modal-body');
 let checkedCity = '';
-
-console.log(formData);
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -26,10 +28,23 @@ function launchModal() {
 
 // close modal event
 modalBtnClose.addEventListener("click", closeModal);
+btnCloseConfirmMessageModal.addEventListener("click", closeModal);
 
 // close modal form
 function closeModal() {
     modalbg.style.display = "none";
+
+    if(formModal.classList.contains('hide-element')){
+        formModal.classList.remove('hide-element');
+    }
+
+    if(!divConfirmMessage.classList.contains('hide-element')){
+        divConfirmMessage.classList.add('hide-element');
+    }
+
+    if(modalBody.classList.contains('modal-confirm-message')){
+        modalBody.classList.remove('modal-confirm-message');
+    }
 }
 
 // control modalFirstName value
@@ -133,6 +148,12 @@ function isTermsOfUseChecked(termsOfUseInput) {
     return true;
 }
 
+function displayModalConfirmMessage() {
+    formModal.classList.add('hide-element');
+    divConfirmMessage.classList.remove('hide-element');
+    modalBody.classList.add('modal-confirm-message');
+}
+
 // send modal form informations after validation
 function validate() {
     const modalFirstName = document.getElementById("first");
@@ -184,15 +205,12 @@ function validate() {
             'TermsOfUse': termsOfUse.checked,
             'NotifiedOfUpcomingEvents': document.getElementById("checkbox2").checked
         })
-        // return true;
+
         console.log('Merci ! Votre réservation a été reçue.');
-        const confirmMsgDiv = document.getElementsByClassName('confirmMsgHide');
-        confirmMsgDiv[0].classList.add("confirmMsgHideShow");
-        confirmMsgDiv[0].classList.remove("confirmMsgHide");
+        formModal.reset();
+        displayModalConfirmMessage();
         return false;
     }
 
     return false;
 }
-
-

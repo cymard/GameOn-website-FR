@@ -202,6 +202,34 @@ main {
     margin: 15px auto;
 }
 
+.modal-confirm-message {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.confirm-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-element {
+    display: none;
+}
+
+.confirm-message p {
+    font-size: 30px;
+    font-weight: initial;
+}
+
+.confirm-message button {
+    position: absolute;
+    bottom: 0;
+}
+
 label {
     font-family: var(--font-default);
     font-size: 17px;
@@ -581,14 +609,6 @@ footer {
     to {
         opacity: 1;
     }
-}
-
-.confirmMsgHide {
-    display: none;
-}
-
-.confirmMsgHideShow {
-    color: green;
 }
 
 @media screen and (max-width: 485px) {
