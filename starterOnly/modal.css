@@ -60,13 +60,19 @@ img {
 .topnav a:hover {
     background-color: #ff0000;
     color: #ffffff;
-    border-radius: 15px;
+    border-radius: 9px;
+    padding-bottom: 8px;
 }
 
 .topnav a.active {
     background-color: #ff0000;
     color: #ffffff;
-    border-radius: 15px;
+    border-radius: 9px;
+    padding-bottom: 8px;
+}
+
+.topnav a.active  span{
+    border-bottom: solid 1px #fff;
 }
 
 .topnav .icon {
@@ -554,7 +560,7 @@ footer {
     margin: 0 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .hero-section {
         display: block;
         box-shadow: unset;
@@ -611,63 +617,161 @@ footer {
     }
 }
 
-@media screen and (max-width: 485px) {
-    .hero-text {
-        font-size: 1.2rem;
-    }
+#myTopnav .main-navbar:last-child i{
+    color: red;
 }
 
-@media screen and (max-width: 710px) {
-    .hero-section {
-        min-height: initial;
-    }
-}
+@media screen and (max-width: 500px) {
 
-@media screen and (max-width: 710px) {
-    .hero-headline {
-        font-size: 2.9rem;
-        text-align: center;
+    #myTopnav {
+        margin-top: 25px;
+        padding-left: 15px;
+    }
+
+    #myTopnav .header-logo img {
+        width: 150px;
+    }
+
+    .bground {
+        margin-top: 67px;
     }
 
     .hero-content {
-        min-width: initial;
         padding: 0;
+        min-width: unset;
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
     }
 
     .hero-text {
-        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    .hero-section {
+        min-height: unset;
+    }
+
+    .copyrights {
+        margin: 0;
+    }
+
+    .content {
+        margin: unset;
+    }
+
+    .formData[data-error]::after {
+        text-align: left;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 830px) {
-    .header-logo {
+
+@media screen and (max-width: 480px) {
+    .main-navbar {
+        width: 102%;
+    }
+
+    #myTopnav .main-navbar:last-child i {
+        color: red;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .topnav a.icon {
+        margin-top: 0;
+    }
+
+    #myTopnav {
+        position: relative;
+    }
+
+    .topnav a:hover {
+        background-color: unset;
+        color: unset;
+        border-radius: 0;
+        padding-bottom: 12px;
+    }
+
+}
+
+@media screen and (min-width: 770px) and (max-width: 1010px) {
+    .main-navbar {
+        width: 100%;
         display: flex;
         justify-content: center;
-        padding: 0 0 20px 0;
-        float: none;
     }
-    .main-navbar {
-        display: flex;
-        align-items: center;
+
+    .header-logo {
+        text-align: center;
+        margin-bottom: 20px;
+        float: unset;
+    }
+
+    .hero-content {
+        padding-top: 0;
     }
 }
 
-@media screen and (min-width: 800px) and (max-width: 1220px) {
-    .hero-section {
-        min-height: 65vh;
-    }
+/*@media screen and (max-width: 485px) {*/
+/*    .hero-text {*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+/*}*/
 
-    .hero-headline {
-        font-size: 4.5rem;
-    }
-}
+/*@media screen and (max-width: 710px) {*/
+/*    !*.hero-section {*!*/
+/*    !*    min-height: initial;*!*/
+/*    !*}*!*/
+/*}*/
 
-@media screen and (min-width: 1220px) and (max-width: 1320px) {
-    .hero-section {
-        min-height: 65vh;
-    }
+/*@media screen and (max-width: 710px) {*/
+/*    .hero-headline {*/
+/*        font-size: 2.9rem;*/
+/*        text-align: center;*/
+/*    }*/
 
-    .hero-headline {
-        font-size: 6rem;
-    }
-}
+/*    .hero-content {*/
+/*        min-width: initial;*/
+/*        padding: 0;*/
+/*    }*/
+
+/*    .hero-text {*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width: 768px) and (max-width: 830px) {*/
+/*    .header-logo {*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        padding: 0 0 20px 0;*/
+/*        float: none;*/
+/*    }*/
+/*    .main-navbar {*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width: 800px) and (max-width: 1220px) {*/
+/*    .hero-section {*/
+/*        min-height: 65vh;*/
+/*    }*/
+
+/*    .hero-headline {*/
+/*        font-size: 4.5rem;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width: 1220px) and (max-width: 1320px) {*/
+/*    .hero-section {*/
+/*        min-height: 65vh;*/
+/*    }*/
+
+/*    .hero-headline {*/
+/*        font-size: 6rem;*/
+/*    }*/
+/*}*/
