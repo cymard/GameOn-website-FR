@@ -209,7 +209,6 @@ function validate() {
         console.log('Merci ! Votre réservation a été reçue.');
         formModal.reset();
         displayModalConfirmMessage();
-        return false;
     }
 
     return false;
